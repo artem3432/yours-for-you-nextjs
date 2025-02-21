@@ -20,3 +20,6 @@ To do list:
 
 
 https://vercel.com/artem34322s-projects/yours-for-you-nextjs
+
+npm run dev - starten
+Ctrl+c - beenden

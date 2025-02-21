@@ -9,6 +9,7 @@ https://flowbite.com/docs/getting-started/introduction/
 https://favicon.io/
 https://www.behance.net/gallery/196882855/SHOPIFY-STORE-ECOMMERCE-ONLINE-SHOP?tracking_source=search_projects%7Conline+shop&l=1
 https://tailwindcss.com/docs/installation/using-vite
+https://react-icons.github.io/react-icons/search/#q=arrow
 
 To do list:
 

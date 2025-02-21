@@ -1,3 +1,5 @@
+import Carousel from "./_components/Carousel"
+
 export default function Home() {
   return (
     <div className="">
@@ -6,7 +8,7 @@ export default function Home() {
       <nav className="z-40 bg-white border-gray-200 dark:bg-gray-900 block">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="index.html" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="favicon.ico" className="h-8" alt="YFY Logo" />
+            <img src="YFY-logo.png" className="h-8" alt="YFY Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Yours_For_You</span>
           </a>
           <div className="flex md:order-1">
@@ -15,7 +17,7 @@ export default function Home() {
               className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
               <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 20 20">
-                <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2"
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
               </svg>
               <span className="sr-only">Search</span>
@@ -24,7 +26,7 @@ export default function Home() {
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                  <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2"
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                 </svg>
                 <span className="sr-only">Search icon</span>
@@ -40,7 +42,7 @@ export default function Home() {
               <span className="sr-only">Open main menu</span>
               <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 17 14">
-                <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2"
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="M1 1h15M1 7h15M1 13h15" />
               </svg>
             </button>
@@ -50,7 +52,7 @@ export default function Home() {
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                  <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2"
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                     d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                 </svg>
               </div>
@@ -78,7 +80,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className="md:flex">
+      <div className="md:flex pad1">
 
         <div className="blocktext">
           <div>
@@ -103,58 +105,7 @@ export default function Home() {
         </div>
 
         <div className="gallery">
-          <div id="gallery" className="relative w-full" data-carousel="slide">
-            {/*    Carousel wrapper */}
-            <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-              {/*    Item 1  */}
-              <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="foto2.jpg" className="object-cover w-full h-full" alt="" />
-              </div>
-              {/*  Item 2 */}
-              <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <img src="foto2.jpg" className="object-cover w-full h-full" alt="" />
-              </div>
-              {/*  Item 3 */}
-              <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="foto2.jpg" className="object-cover w-full h-full" alt="" />
-              </div>
-              {/*  Item 4 */}
-              <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="foto2.jpg" className="object-cover w-full h-full" alt="" />
-              </div>
-              {/*  Item 5 */}
-              <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="foto2.jpg" className="object-cover w-full h-full" alt="" />
-              </div>
-            </div>
-            {/*  Slider controls */}
-            <button type="button"
-              className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-              data-carousel-prev>
-              <span
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                  <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M5 1 1 5l4 4" />
-                </svg>
-                <span className="sr-only">Previous</span>
-              </span>
-            </button>
-            <button type="button"
-              className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-              data-carousel-next>
-              <span
-                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                  <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m1 9 4-4-4-4" />
-                </svg>
-                <span className="sr-only">Next</span>
-              </span>
-            </button>
-          </div>
+          <Carousel />
         </div>
       </div>
       <br />
@@ -199,7 +150,7 @@ export default function Home() {
               <span className="sr-only">Previous</span>
               <svg className="w-3 h-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2"
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="M5 1 1 5l4 4" />
               </svg>
             </a>
@@ -230,7 +181,7 @@ export default function Home() {
               <span className="sr-only">Next</span>
               <svg className="w-3 h-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                 fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" strokeLinecap="round" stroke-linejoin="round" stroke-width="2"
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                   d="m1 9 4-4-4-4" />
               </svg>
             </a>

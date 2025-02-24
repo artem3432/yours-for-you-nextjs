@@ -18,7 +18,7 @@ body {
   font-family: Arial, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #B4BEC9;
+  background-color: black;
 }
 
 h1 {
@@ -96,6 +96,10 @@ h1 {
     color: #002333;
   }
 
+  .BC3 {
+    background-color: #002333;
+  }
+
   .C4 {
     color: #DEEFE7;
   }
@@ -107,7 +111,7 @@ h1 {
   .pad1 {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 20px;
   }
 
@@ -149,6 +153,42 @@ h1 {
     }
   }
 
+  .text-s2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 768px) {
+    .text-s2 {
+      font-size: 20px;
+      line-height: auto;
+    }
+  }
+
+  .text-s3 {
+    font-size: 30px;
+    line-height: auto;
+  }
+
+  @media (min-width: 768px) {
+    .text-s3 {
+      font-size: 50px;
+      line-height: 65px;
+    }
+  }
+
+  .text-s4 {
+    font-size: 18px;
+    line-height: auto;
+  }
+
+  @media (min-width: 768px) {
+    .text-s4 {
+      font-size: 28px;
+      line-height: 10px;
+    }
+  }
+
   .embla {
     overflow: hidden;
   }
@@ -160,5 +200,16 @@ h1 {
     min-width: 0;
   }
 
+  .foto3-h {
+    width: auto;
+      height: 10%;
+      max-width: unset;
+  }
+
+  @media (min-width: 768px) {
+    .foto3-h {
+      height: 40%;
+    }
+  }
 
 }

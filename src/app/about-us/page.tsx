@@ -1,13 +1,8 @@
 import Buttonshop from "../Buttonshop";
-import Footer from "../Footer";
-import Navbar from "../Navbar";
 
 export default function Home() {
     return (
         <div className="">
-
-            <Navbar />
-            <br />
             <div className="pad1">
                 <h3 className="text-s2 text-red-600">SHOPING</h3><br />
                 <h1 className="text-s3 text-white font-bold">ABOUT US</h1><br />
@@ -31,15 +26,11 @@ export default function Home() {
                         <li className="text-violet-700 list-disc">Alan Shepard</li>
                     </ul>
                 </div>
-                
+
                 <div className="w-full p-2">
                     <Buttonshop />
                 </div>
             </div>
-
-            <br />
-            <Footer />
-
         </div>
     );
 }

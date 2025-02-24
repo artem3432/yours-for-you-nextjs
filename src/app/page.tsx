@@ -1,15 +1,11 @@
 import Carousel from "./_components/Carousel"
 import Buttonshop from "./Buttonshop";
 import Categories from "./Categories";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
 import Pagination from "./Pagination-with-icons";
 
 export default function Home() {
   return (
-    <div className="">
-
-      <Navbar />
+    <div>
 
       <div className="md:flex pad1">
 
@@ -24,7 +20,7 @@ export default function Home() {
             </div>
           </div>
 
-          <Buttonshop/>
+          <Buttonshop />
 
         </div>
 
@@ -34,7 +30,7 @@ export default function Home() {
       </div>
       <br />
       <Categories />
-      
+
       <div className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
         <div>
           <a href="produkt_1.html"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
@@ -56,11 +52,6 @@ export default function Home() {
       <br />
       <Pagination />
       <br />
-      <Footer />
-
     </div>
-
-
-
-  );
+  )
 }

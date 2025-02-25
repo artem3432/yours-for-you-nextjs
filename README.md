@@ -23,4 +23,5 @@ Ctrl+f - suche aufmachen
 
 To do list:
 
-- [ ] 
+- [ ] Find information for all T-shirts https://www.zalando.de/herrenbekleidung-shirts/
+- [ ] Change the produckt page by adding 

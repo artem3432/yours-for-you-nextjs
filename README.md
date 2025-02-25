@@ -11,15 +11,16 @@ https://www.behance.net/gallery/196882855/SHOPIFY-STORE-ECOMMERCE-ONLINE-SHOP?tr
 https://tailwindcss.com/docs/installation/using-vite
 https://react-icons.github.io/react-icons/search/#q=arrow
 
-To do list:
-
-- [ ] Hamburger meny 
-- [ ] Buton SHOP
-- [ ] Foto from T-shirts
-- [ ] Produktlist
-
 
 https://vercel.com/artem34322s-projects/yours-for-you-nextjs
+yours-for-you.vercel.app
 
 npm run dev - starten
 Ctrl+c - beenden
+Ctrl+d - gleiche markieren
+Ctrl+f - suche aufmachen
+
+
+To do list:
+
+- [ ] 

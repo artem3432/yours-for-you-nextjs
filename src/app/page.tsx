@@ -33,19 +33,19 @@ export default function Home() {
 
       <div className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
         <div>
-          <a href="produkt_1.html"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
+          <a href="/produkt"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
           <p className="text-white">Long T-Shirts <br /> White <br /> $25</p>
         </div>
         <div>
-          <a href="produkt_1.html"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
+          <a href="/produkt"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
           <p className="text-white">Long T-Shirts <br /> White <br /> $25</p>
         </div>
         <div>
-          <a href="produkt_1.html"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
+          <a href="/produkt"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
           <p className="text-white">Long T-Shirts <br /> White <br /> $25</p>
         </div>
         <div>
-          <a href="produkt_1.html"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
+          <a href="/produkt"><img className="h-auto max-w-full rounded-lg" src="foto.webp" alt="" /></a>
           <p className="text-white">Long T-Shirts <br /> White <br /> $25</p>
         </div>
       </div>

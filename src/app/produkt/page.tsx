@@ -49,3 +49,6 @@ export default function Home() {
 
     );
 }
+
+
+//className="h-96 rounded-lg"

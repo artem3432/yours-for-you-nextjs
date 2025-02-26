@@ -45,13 +45,26 @@ export default async function Home({
                         <p className="pb-2">Size</p>
                         <div className="flex flex-row flex-nowrap">
                             {product.sizes.map((size) => (
-                                <Sizebutton size={size} key={size}/>
+                                <Sizebutton size={size} key={size} />
                             ))}
                         </div>
                     </div>
                     <div className="pb-5">
                         <p className="pb-2">Quantity</p>
-                        <p>1</p>
+
+
+                        <div className="inline-flex rounded-md shadow-xs" role="group">
+                            <button type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-s-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white">
+                                -
+                            </button>
+                            <button type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border-t border-b border-gray-900 hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white">
+                                1
+                            </button>
+                            <button type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-e-lg hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white">
+                                +
+                            </button>
+                        </div>
+
                     </div>
                 </div>
                 <div className="pb-20">

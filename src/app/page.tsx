@@ -36,7 +36,7 @@ export default function Home() {
       <div className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
         {products.map((product) => (
           <div>
-            <a href="/produkt">
+            <a href={`/produkt/${product.id}`}>
             <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="h-96 rounded-lg" />
             </a>
             <p className="text-white">{product.title} <br />{product.color} <br />{ product.price} $</p>

@@ -1,14 +1,14 @@
 export default function Home() {
   return (
-    <div className="text-white">
+    <div className="text-white md:flex-col pad1">
       <div>
-        <h1>Cart</h1>
+        <h1 className="C1">Cart</h1>
       </div>
 
 
-      <div>
-        <div>
-          <div>
+      <div className="grid grid-flow-col grid-rows-3 gap-4"> 
+        <div className="col-span-2 row-span-3">
+          <div className="flex-row pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
             <div>
               <img src="#" alt="Photo" />
             </div>
@@ -18,36 +18,36 @@ export default function Home() {
             <div>
               <p>Preis</p>
             </div>
-          </div> //Flex
-          <div>
+          </div> 
+          <div className="flex-row pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
             <div>
               <p>Remove</p>
             </div>
-            <div>
-              <div>
+            <div className="flex flex-row">
+              <div className="pr-4">
                 <p>Update</p>
               </div>
               <div>
                 <p>Addbutton</p>
               </div>
-            </div> //Flex
-          </div> //Flex
+            </div> 
+          </div> 
         </div>
 
-        <div>
-          <div>
+        <div className="row-span-3 flex flex-col grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="flex flex-row">
             <div>
               <p>Total</p>
             </div>
             <div>
               <p>Preis</p>
             </div>
-          </div> // Flex
-          <div>
+          </div> 
+          <div className="">
             <p>Checkout</p>
           </div>
-        </div> //Flex
-      </div> //grid
+        </div> 
+      </div> 
     </div>
   )
 }

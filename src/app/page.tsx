@@ -1,5 +1,4 @@
 import Carousel from "./_components/Carousel"
-import Buttonshop from "./Buttonshop";
 import Categories from "./Categories";
 import Pagination from "./Pagination-with-icons";
 import { products } from "./products";
@@ -21,9 +20,6 @@ export default function Home() {
                 collections</p>
             </div>
           </div>
-
-          <Buttonshop />
-
         </div>
 
         <div className="gallery">

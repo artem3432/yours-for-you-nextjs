@@ -1,4 +1,4 @@
-import Sizebutton from "@/Sizebutton";
+import Sizebutton from "@/app/Sizebutton";
 import Buttonbuy from "../../Buttonbuy";
 import { products } from "../../products";
 import Addbutton from "@/app/Addbutton";

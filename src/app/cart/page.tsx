@@ -1,12 +1,12 @@
 export default function Home() {
   return (
     <div className="text-white md:flex-col pad1">
-      <div>
-        <h1 className="C1">Cart</h1>
+      <div className="pad1">
+        <h1 className="text-white">Cart</h1>
       </div>
 
 
-      <div className="grid grid-flow-col grid-rows-3 gap-4"> 
+      <div className="grid grid-flow-col grid-rows-3 gap-4">
         <div className="col-span-2 row-span-3">
           <div className="flex-row pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
             <div>
@@ -18,7 +18,7 @@ export default function Home() {
             <div>
               <p>Preis</p>
             </div>
-          </div> 
+          </div>
           <div className="flex-row pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
             <div>
               <p>Remove</p>
@@ -30,24 +30,26 @@ export default function Home() {
               <div>
                 <p>Addbutton</p>
               </div>
-            </div> 
-          </div> 
+            </div>
+          </div>
         </div>
 
-        <div className="row-span-3 flex flex-col grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="flex flex-row">
-            <div>
+        <div className="">
+          <div className="pad1 flex flex-row">
+            <div className="pr-2">
               <p>Total</p>
             </div>
             <div>
               <p>Preis</p>
             </div>
-          </div> 
-          <div className="">
+          </div>
+          <div className="pad1">
             <p>Checkout</p>
           </div>
-        </div> 
-      </div> 
+        </div>
+
+
+      </div>
     </div>
   )
 }

@@ -33,7 +33,7 @@ export default function Home() {
         {products.map((product) => (
           <div key={product.id}>
             <a href={`/produkt/${product.id}`}>
-            <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="h-96 rounded-lg" />
+            <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="md:h-96 rounded-lg" />
             </a>
             <p className="text-white">{product.title} <br />{product.color} <br />{ product.price} $</p>
           </div>

@@ -26,4 +26,8 @@ Ctrl+f - suche aufmachen
 
 To do list:
 
-- [ ] 
+- [ ] Ganze Info hinzufügen (Size, Quantity)
+- [ ] Remove und Anzahl Button ändern
+- [ ] Update löchen
+- [ ] Die Summe der Produckte schreiben
+- [ ] link von Foto in Card zu Produktseite

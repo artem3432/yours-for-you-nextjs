@@ -1,7 +1,6 @@
 import Sizebutton from "@/app/Sizebutton";
 import Buttonbuy from "../../Buttonbuy";
 import { products } from "../../products";
-import Addbutton from "@/app/Addbutton";
 
 
 export default async function Home({
@@ -50,13 +49,10 @@ export default async function Home({
                             ))}
                         </div>
                     </div>
-                    <div className="pb-5">
-                        <p className="pb-2">Quantity</p>
-                        <Addbutton /> 
-                    </div>
+                   
                 </div>
                 <div className="pb-20">
-                    <Buttonbuy />
+                    <Buttonbuy idValue={id} />
                 </div>
             </div>
         </div>

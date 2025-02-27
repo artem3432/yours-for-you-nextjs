@@ -1,8 +1,8 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Navbar() {
-    const [itemCount, setItemCount] = useState(1);
+export default function QuantityButton({ onChange, defaultValue = 1 }: { onChange: (a: number) => void, defaultValue?: number }) {
+    const [itemCount, setItemCount] = useState(defaultValue);
 
     function addoneitem() {
         if (itemCount < 99) {
@@ -15,6 +15,10 @@ export default function Navbar() {
             setItemCount(itemCount - 1)
         }
     }
+
+    useEffect(() => {
+        onChange(itemCount)
+    }, [itemCount])
 
     return (
         <div className="inline-flex rounded-md shadow-xs" role="group">

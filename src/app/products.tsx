@@ -1,4 +1,14 @@
-export const products = [
+export type Product = {
+  id: string
+  title: string[]
+  color: string[]
+  price: number[]
+  sizes: string[]
+  photos: { src: string; alt: string }[]
+  oldprice?: number[]
+}
+
+export const products:Product[] = [
   {
     id: "T-1",
     title: ["BRODY - T-Shirt basic"],

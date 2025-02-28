@@ -12,20 +12,19 @@ export type CartItemProps = {
 
 export default function ClientStorageWrapper() {
     const [items, setItems] = useState<CartItemProps[] | null>(null)
-    
+
     useEffect(() => {
         const storage = localStorage.getItem("addToCart")
         const itemsInCart: CartItemProps[] | null = storage && JSON.parse(storage)
         setItems(itemsInCart)
     }, [])
 
-
     return (
         <div>
             {items?.map(item => {
                 const product = products.find(product => product.id === item.productId)
                 if (!product) return null
-                return (<CartItem product={product} quantity={item.quanitaty} key={product.id} />)
+                return (<CartItem onChange={setItems} product={product} quantity={item.quanitaty} key={product.id} />)
             })}
 
         </div>

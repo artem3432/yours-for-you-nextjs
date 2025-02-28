@@ -10,6 +10,9 @@ https://favicon.io/
 https://www.behance.net/gallery/196882855/SHOPIFY-STORE-ECOMMERCE-ONLINE-SHOP?tracking_source=search_projects%7Conline+shop&l=1
 https://tailwindcss.com/docs/installation/using-vite
 https://react-icons.github.io/react-icons/search/#q=arrow
+https://html5up.net/
+https://mui.com/material-ui/react-drawer/
+https://fonts.google.com/
 
 https://www.teepublic.com/cart
 
@@ -27,7 +30,6 @@ Ctrl+f - suche aufmachen
 To do list:
 
 - [ ] Ganze Info hinzufügen (Size, Quantity)
-- [ ] Remove und Anzahl Button ändern
-- [ ] Update löchen
 - [ ] Die Summe der Produckte schreiben
-- [ ] link von Foto in Card zu Produktseite
+- [ ] link im Foto vom Card zur Produktseite
+- [ ] BG in Cart auf ganze Breite machen 

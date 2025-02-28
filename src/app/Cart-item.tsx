@@ -6,6 +6,8 @@ import QuantityButton from "./QuantatyButton";
 
 export default function CartItem({ product, quantity }: { product: Product, quantity: number }) {
       const [itemCount, setItemCount] = useState(quantity);
+      // TODO: remove console.log
+      console.log(itemCount)
       
     return (
         <div className="col-span-2 row-span-3">

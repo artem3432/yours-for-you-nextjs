@@ -104,7 +104,7 @@ export default function Home() {
                             <label htmlFor="remember" className="ms-2 text-sm font-medium text-gray-900">I agree with the <a href="#" className="text-blue-600 hover:underline">terms and conditions</a>.</label>
                         </div>
                         <div>
-                           <button type="button" className="text-2xl focus:outline-none bg-blue-400 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2">Continue to Payment</button> 
+                           <button type="submit" className="text-2xl focus:outline-none bg-blue-400 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2">Continue to Payment</button> 
                         </div>
                     </div> 
                     </div>

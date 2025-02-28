@@ -18,7 +18,7 @@ export default function QuantityButton({ onChange, defaultValue = 1 }: { onChang
 
     useEffect(() => {
         onChange(itemCount)
-    }, [itemCount])
+    }, [itemCount, onChange])
 
     return (
         <div className="inline-flex rounded-md shadow-xs" role="group">

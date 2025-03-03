@@ -1,8 +1,8 @@
 import Carousel from "./_components/Carousel"
 import Categories from "./Categories";
+import FavoritIcon from "./FavoritIcon";
 import Pagination from "./Pagination-with-icons";
-import { products } from "./products";
-
+import { Product, products } from "./products";
 
 export default function Home() {
   return (
@@ -30,14 +30,12 @@ export default function Home() {
       <Categories />
 
       <div className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
-        {products.map((product) => (
-          <div key={product.id}>
-            <a href={`/produkt/${product.id}`}>
-            <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="md:h-96 rounded-lg" />
-            </a>
-            <p className="text-white">{product.title} <br />{product.color} <br />{ product.price} $</p>
-          </div>
-        ))}
+
+
+        {products.map((product: Product) => {
+          return <FavoritIcon product={product}key={product.id} />
+        })}
+
 
       </div>
       <br />

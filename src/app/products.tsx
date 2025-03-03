@@ -2,20 +2,20 @@ export type Product = {
   id: string
   title: string[]
   color: string[]
-  price: number[]
+  price: number
   sizes: string[]
   photos: { src: string; alt: string }[]
   oldprice?: number[]
 }
 
-export const products:Product[] = [
+export const products: Product[] = [
   {
     id: "T-1",
     title: ["BRODY - T-Shirt basic"],
     color: [
       "light brown"
     ],
-    price: [29.95],
+    price: 29.9,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {
@@ -43,7 +43,7 @@ export const products:Product[] = [
     color: [
       "black"
     ],
-    price: [29.95],
+    price: 29.9,
     sizes: ["S", "M", "L", "XL"],
     photos: [
       {
@@ -70,7 +70,7 @@ export const products:Product[] = [
     color: [
       "green"
     ],
-    price: [29.95],
+    price: 29.95,
     sizes: ["S", "M", "L"],
     photos: [
       {
@@ -97,7 +97,7 @@ export const products:Product[] = [
     color: [
       "chocolate brown"
     ],
-    price: [23.00],
+    price: 23.00,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {
@@ -124,7 +124,7 @@ export const products:Product[] = [
     color: [
       "blue"
     ],
-    price: [23.00],
+    price: 23.00,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {
@@ -152,7 +152,7 @@ export const products:Product[] = [
       "black"
     ],
     oldprice: [23.00],
-    price: [12.50],
+    price: 12.50,
     sizes: ["XS", "S", "M", "L", "XL"],
     photos: [
       {
@@ -179,7 +179,7 @@ export const products:Product[] = [
     color: [
       "green pine"
     ],
-    price: [13.00],
+    price: 13.00,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {
@@ -206,7 +206,7 @@ export const products:Product[] = [
     color: [
       "whitesand"
     ],
-    price: [19.99],
+    price: 19.99,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {
@@ -234,7 +234,7 @@ export const products:Product[] = [
       "white"
     ],
     oldprice: [25.49],
-    price: [23.99],
+    price: 23.99,
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     photos: [
       {
@@ -262,7 +262,7 @@ export const products:Product[] = [
       "black"
     ],
     oldprice: [24.99],
-    price: [17.49],
+    price: 17.49,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {
@@ -289,7 +289,7 @@ export const products:Product[] = [
     color: [
       "off white"
     ],
-    price: [24.95],
+    price: 24.95,
     sizes: ["M", "L", "XL", "XXL"],
     photos: [
       {
@@ -316,7 +316,7 @@ export const products:Product[] = [
     color: [
       "duskrose"
     ],
-    price: [29.95],
+    price: 29.95,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {

@@ -2,17 +2,23 @@
 import { useState } from "react";
 import { CartItemProps } from "./cart/ClientStorageWrapper";
 import QuantityButton from "./QuantatyButton";
+import Sizebutton from "./Sizebutton";
+import { Product } from "./products";
 
 
-export default function Buttonbuy({ idValue }: { idValue: string }) {
+export default function Buttonbuy({ product }: { product: Product }) {
   const [itemCount, setItemCount] = useState(1);
+  const [itemSize, setItemSize] = useState("M");
 
   function addToCart() {
-    const item: CartItemProps = { productId: idValue, size: "M", quanitaty: itemCount }
+    const item: CartItemProps = { 
+      productId: product.id, 
+      size: itemSize, 
+      quanitaty: itemCount }
 
     const storage = localStorage.getItem("addToCart")
     const itemsInCart: CartItemProps[] | null = storage && JSON.parse(storage)
-    const newCartItems = itemsInCart ? itemsInCart.concat(item)  : [item]
+    const newCartItems = itemsInCart ? itemsInCart.concat(item) : [item]
 
     localStorage.setItem("addToCart", JSON.stringify(newCartItems))
   }
@@ -21,8 +27,16 @@ export default function Buttonbuy({ idValue }: { idValue: string }) {
   return (
     <>
       <div className="pb-5">
+        <p className="pb-2">Size</p>
+        <div className="flex flex-row flex-nowrap">
+          {product.sizes.map((size) => (
+            <Sizebutton size={size} key={size} onClick={() => setItemSize(size)}/>
+          ))}
+        </div>
+      </div>
+      <div className="pb-5">
         <p className="pb-2">Quantity</p>
-       <QuantityButton onChange={(newCount)=> setItemCount(newCount)} />
+        <QuantityButton onChange={(newCount) => setItemCount(newCount)} />
       </div>
       <div>
         <button

@@ -40,19 +40,8 @@ export default async function Home({
                     <span className="text-lg font-medium">${product.price}</span>
                     {product.oldprice && <span className="p-3 text-lg font-medium line-through">${product.oldprice}</span>}
                 </div>
-                <div>
-                    <div className="pb-5">
-                        <p className="pb-2">Size</p>
-                        <div className="flex flex-row flex-nowrap">
-                            {product.sizes.map((size) => (
-                                <Sizebutton size={size} key={size} />
-                            ))}
-                        </div>
-                    </div>
-                   
-                </div>
                 <div className="pb-20">
-                    <Buttonbuy idValue={id} />
+                    <Buttonbuy product={product} />
                 </div>
             </div>
         </div>

@@ -9,7 +9,7 @@ export default function Favorites() {
       </div>
  
 
-      <div className="md:flex flex-row p-6">
+      <div className="md:flex flex-row p-6 grid grid-cols-2 md:grid-cols-3 gap-4">
         <ClientStorageFavorites />
 
 

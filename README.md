@@ -13,6 +13,7 @@ https://react-icons.github.io/react-icons/search/#q=arrow
 https://html5up.net/   html templates
 https://mui.com/material-ui/react-drawer/
 https://fonts.google.com/
+https://www.fusejs.io/ search for js
 
 https://nextjs.org/learn
 
@@ -31,7 +32,5 @@ Ctrl+f - suche aufmachen
 
 To do list:
 
-- [ ] Ganze Info hinzufügen (Size, Quantity)
-- [ ] Die Summe der Produckte schreiben
-- [ ] link im Foto vom Card zur Produktseite
-- [ ] BG in Cart auf ganze Breite machen 
+- [ ] Ganze Info hinzufügen (Size)
+- [ ] Pagination

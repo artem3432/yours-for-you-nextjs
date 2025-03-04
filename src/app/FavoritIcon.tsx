@@ -53,7 +53,7 @@ export default function FavoritIcon({ product }: { product: Product }) {
                 {isFavorit ? <FavoriteIcon className="!fill-slate-600" /> : <FavoriteBorderIcon className="!fill-slate-600" />}
                 </button>
             <a href={`/produkt/${product.id}`} >
-                <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="md:h-96 rounded-lg" />
+                <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="h-auto rounded-lg w-96" />
             </a>
             <p>
                 {product.title} <br />

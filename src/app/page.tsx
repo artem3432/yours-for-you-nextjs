@@ -1,10 +1,24 @@
+import Fuse from "fuse.js";
 import Carousel from "./_components/Carousel"
 import Categories from "./Categories";
 import FavoritIcon from "./FavoritIcon";
 import Pagination from "./Pagination-with-icons";
 import { Product, products } from "./products";
 
-export default function Home() {
+export default function Home({searchParams}: {searchParams: {search?: string}}) {
+
+  const searchQuery =  searchParams.search || ""
+  const options = {
+    includeScore: true,
+    keys: ['title', 'color'],
+    threshold: 0.3
+  }
+  
+  const fuse = new Fuse(products, options)
+  
+  const result = fuse.search(searchQuery )
+  const productList = searchQuery ? result.map(({item}) => item) : products
+
   return (
     <div>
 
@@ -29,10 +43,10 @@ export default function Home() {
       <br />
       <Categories />
 
-      <div className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4 text-white">
+      <div id="products" className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4 text-white">
 
 
-        {products.map((product: Product) => {
+        {productList.map((product: Product) => {
           return <FavoritIcon product={product}key={product.id} />
         })}
 

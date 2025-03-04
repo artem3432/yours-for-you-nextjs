@@ -5,9 +5,9 @@ import FavoritIcon from "./FavoritIcon";
 import Pagination from "./Pagination-with-icons";
 import { Product, products } from "./products";
 
-export default function Home({searchParams}: {searchParams: {search?: string}}) {
+export default async function Home({searchParams}: {searchParams: Promise<{search?: string}>}) {
 
-  const searchQuery =  searchParams.search || ""
+  const searchQuery =  (await searchParams).search || ""
   const options = {
     includeScore: true,
     keys: ['title', 'color'],

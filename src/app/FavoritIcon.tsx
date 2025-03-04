@@ -29,7 +29,7 @@ export default function FavoritIcon({ product }: { product: Product }) {
         const item: FavItemProps = { productId: product.id };
         const storage = localStorage.getItem("addToFav");
         const itemsInCart: FavItemProps[] = storage ? JSON.parse(storage) : [];
-        
+
         // Avoid duplicate entries
         if (!itemsInCart.some(p => p.productId === product.id)) {
             const newCartItems = [...itemsInCart, item];

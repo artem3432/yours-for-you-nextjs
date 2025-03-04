@@ -29,7 +29,7 @@ export default function Home() {
       <br />
       <Categories />
 
-      <div className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4 text-white">
 
 
         {products.map((product: Product) => {

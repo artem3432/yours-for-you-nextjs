@@ -6,62 +6,60 @@ import { useEffect, useState } from "react";
 import { FavItemProps } from "./favorites/ClientStorageFavorites";
 
 export default function FavoritIcon({ product }: { product: Product }) {
-    const [isFavorit, setIsFavorit] = useState(false)
-
+    const [isFavorit, setIsFavorit] = useState(false);
 
     useEffect(() => {
-        const storage = localStorage.getItem("addToFav")
-        const itemsInCart: FavItemProps[] | null = storage && JSON.parse(storage)
-        const isFav = itemsInCart?.find((p) => p.productId === product.id)
-        if (isFav) setIsFavorit(true)
-
-    }, [])
+        const storage = localStorage.getItem("addToFav");
+        const itemsInCart: FavItemProps[] = storage ? JSON.parse(storage) : [];
+        const isFav = itemsInCart.some((p) => p.productId === product.id);
+        setIsFavorit(isFav);
+    }, []);
 
     function handleFavClick(event: React.MouseEvent<HTMLButtonElement>) {
-        event.stopPropagation()
-        if (isFavorit === true) {
-            setIsFavorit(false)
-            removeFromFav()
+        event.stopPropagation();
+        if (isFavorit) {
+            removeFromFav();
+        } else {
+            addToFav();
         }
-        else {
-            setIsFavorit(true)
-            addToFav()
-        }
+        setIsFavorit(!isFavorit);
     }
-    function addToFav() {
-        const item: FavItemProps = {
-            productId: product.id
-        }
-        const storage = localStorage.getItem("addToFav")
-        const itemsInCart: FavItemProps[] | null = storage && JSON.parse(storage)
-        const newCartItems = itemsInCart ? itemsInCart.concat(item) : [item]
 
-        localStorage.setItem("addToFav", JSON.stringify(newCartItems))
+    function addToFav() {
+        const item: FavItemProps = { productId: product.id };
+        const storage = localStorage.getItem("addToFav");
+        const itemsInCart: FavItemProps[] = storage ? JSON.parse(storage) : [];
+        
+        // Avoid duplicate entries
+        if (!itemsInCart.some(p => p.productId === product.id)) {
+            const newCartItems = [...itemsInCart, item];
+            localStorage.setItem("addToFav", JSON.stringify(newCartItems));
+        }
     }
 
     function removeFromFav() {
-        const item: FavItemProps = {
-            productId: product.id
-        }
-        const storage = localStorage.getItem("removeToFav")
-        const itemsInCart: FavItemProps[] | null = storage && JSON.parse(storage)
-        const newCartItems = itemsInCart ? itemsInCart.concat(item) : [item]
+        const storage = localStorage.getItem("addToFav");
+        const itemsInCart: FavItemProps[] = storage ? JSON.parse(storage) : [];
 
-        localStorage.setItem("removeToFav", JSON.stringify(newCartItems))
-
+        const newCartItems = itemsInCart.filter(p => p.productId !== product.id);
+        localStorage.setItem("addToFav", JSON.stringify(newCartItems));
     }
 
     return (
         <div key={product.id} className="relative">
             <button
-                className="absolute top-4 left-4" onClick={handleFavClick}>
+                className="absolute top-4 left-4"
+                onClick={handleFavClick}>
                 {isFavorit ? <FavoriteIcon className="!fill-slate-600" /> : <FavoriteBorderIcon />}
             </button>
             <a href={`/produkt/${product.id}`} >
                 <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="md:h-96 rounded-lg" />
             </a>
-            <p className="text-white">{product.title} <br />{product.color} <br />{product.price} $</p>
+            <p className="text-white">
+                {product.title} <br />
+                {product.color} <br />
+                {product.price} $
+            </p>
         </div>
-
-    )
+    );
 }

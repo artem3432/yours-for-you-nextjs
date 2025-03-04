@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import CartItem from "../Cart-item"
 import { products } from "../products"
 import FavoritIcon from "../FavoritIcon"
 

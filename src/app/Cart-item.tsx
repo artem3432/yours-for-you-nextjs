@@ -21,7 +21,7 @@ function updateProductCount(productId: string, quanitaty: number) {
 
 
 
-export default function CartItem({ product, quantity, onChange }: { product: Product, quantity: number, onChange?: (a: CartItemProps[]) => void }) {
+export default function CartItem({ product, quantity, onChange, size}: { size: string,product: Product, quantity: number, onChange?: (a: CartItemProps[]) => void }) {
     const [itemCount, setItemCount] = useState(quantity);
 
     function removeProduct(productId: string) {
@@ -41,11 +41,11 @@ export default function CartItem({ product, quantity, onChange }: { product: Pro
         <div className="col-span-2 row-span-3">
             <div className="flex-row pad1 md:grid grid-cols-2 md:grid-cols-3 gap-4">
                 <div>
-                    <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="md:h-96 rounded-lg" />
+                    <img src={product.photos?.[0].src} alt={product.photos?.[0].alt} className="md:h-auto w-full rounded-lg" />
                 </div>
                 <div>
                     <p>{product.title}</p>
-                    <p>Size: {product.sizes?.[0]}</p>
+                    <p>Size: {size}</p>
                     <p>Color: {product.color}</p>
                 </div>
                 <div>

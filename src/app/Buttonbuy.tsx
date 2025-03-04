@@ -11,10 +11,11 @@ export default function Buttonbuy({ product }: { product: Product }) {
   const [itemSize, setItemSize] = useState("M");
 
   function addToCart() {
-    const item: CartItemProps = { 
-      productId: product.id, 
-      size: itemSize, 
-      quanitaty: itemCount }
+    const item: CartItemProps = {
+      productId: product.id,
+      size: itemSize,
+      quanitaty: itemCount
+    }
 
     const storage = localStorage.getItem("addToCart")
     const itemsInCart: CartItemProps[] | null = storage && JSON.parse(storage)
@@ -29,9 +30,14 @@ export default function Buttonbuy({ product }: { product: Product }) {
       <div className="pb-5">
         <p className="pb-2">Size</p>
         <div className="flex flex-row flex-nowrap">
-          {product.sizes.map((size) => (
-            <Sizebutton size={size} key={size} onClick={() => setItemSize(size)}/>
-          ))}
+          {product.sizes.map((size) => {
+            const isActive = itemSize == size
+            return (
+              <Sizebutton
+                className={isActive ? "!bg-black text-white" : ""}
+                size={size} key={size} onClick={() => setItemSize(size)} />
+            )
+          })}
         </div>
       </div>
       <div className="pb-5">

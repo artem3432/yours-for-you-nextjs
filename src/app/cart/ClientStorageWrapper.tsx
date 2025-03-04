@@ -31,7 +31,7 @@ export default function ClientStorageWrapper() {
             {items?.map(item => {
                 const product = products.find(product => product.id === item.productId)
                 if (!product) return null
-                return (<CartItem onChange={setItems} product={product} quantity={item.quanitaty} key={product.id} />)
+                return (<CartItem onChange={setItems} product={product} size={item.size} quantity={item.quanitaty} key={product.id} />)
             })}
         </div>
          <div className="block max-w-sm p-6 bg-gray-100 border border-gray-300 rounded-lg shadow-lg hover:bg-gray-100 h-min">

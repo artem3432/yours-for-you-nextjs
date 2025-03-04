@@ -1,4 +1,3 @@
-import Sizebutton from "@/app/Sizebutton";
 import Buttonbuy from "../../Buttonbuy";
 import { products } from "../../products";
 

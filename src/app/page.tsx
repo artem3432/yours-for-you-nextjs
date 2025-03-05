@@ -5,9 +5,11 @@ import FavoritIcon from "./FavoritIcon";
 import Pagination from "./Pagination-with-icons";
 import { Product, products } from "./products";
 
-export default async function Home({searchParams}: {searchParams: Promise<{search?: string}>}) {
+const productsPerPage = 6 
+export default async function Home({searchParams}: {searchParams: Promise<{search?: string, page?: number}>}) {
 
   const searchQuery =  (await searchParams).search || ""
+  const page = (await searchParams).page || 0
   const options = {
     includeScore: true,
     keys: ['title', 'color'],
@@ -18,6 +20,8 @@ export default async function Home({searchParams}: {searchParams: Promise<{searc
   
   const result = fuse.search(searchQuery )
   const productList = searchQuery ? result.map(({item}) => item) : products
+  const productsOnPage= productList.slice(page, productsPerPage)
+
 
   return (
     <div>
@@ -46,14 +50,14 @@ export default async function Home({searchParams}: {searchParams: Promise<{searc
       <div id="products" className="pad1 grid grid-cols-2 md:grid-cols-3 gap-4 text-white">
 
 
-        {productList.map((product: Product) => {
+        {productsOnPage.map((product: Product) => {
           return <FavoritIcon product={product}key={product.id} />
         })}
 
 
       </div>
       <br />
-      <Pagination />
+      <Pagination products={productList} currentPage={page} />
       <br />
     </div>
   )

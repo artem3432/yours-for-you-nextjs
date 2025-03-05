@@ -20,7 +20,7 @@ export default function Pagination({ products, currentPage }: { products: Produc
                     </a>
                 </li>}
                 {pageNumbers.map((number) => (
-                    <li>
+                    <li key={number}>
                         <a href={`/?page=${number}`}
                             className={`${number == currentPage && "!bg-gray-400"} flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-white hover:bg-gray-100 hover:text-gray-700`}>
                             {number + 1}

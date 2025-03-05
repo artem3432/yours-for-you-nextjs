@@ -32,5 +32,4 @@ Ctrl+f - suche aufmachen
 
 To do list:
 
-- [ ] Ganze Info hinzufügen (Size)
-- [ ] Pagination
+- [ ] 

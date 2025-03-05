@@ -4,7 +4,7 @@ export type Product = {
   color: string[]
   price: number
   sizes: string[]
-  categories?: string[]
+  categories: string[]
   photos: { src: string; alt: string }[]
   oldprice?: number[]
 }
@@ -17,7 +17,7 @@ export const products: Product[] = [
       "light brown"
     ],
     price: 29.9,
-    categories: ["Man", "Unisex"],
+    categories: ["Man"],
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {
@@ -45,6 +45,7 @@ export const products: Product[] = [
     color: [
       "black"
     ],
+    categories: ["Man"],
     price: 29.9,
     sizes: ["S", "M", "L", "XL"],
     photos: [
@@ -72,6 +73,7 @@ export const products: Product[] = [
     color: [
       "green"
     ],
+    categories: ["Man"],
     price: 29.95,
     sizes: ["S", "M", "L"],
     photos: [
@@ -99,6 +101,7 @@ export const products: Product[] = [
     color: [
       "chocolate brown"
     ],
+    categories: ["Man", "Unisex"],
     price: 23.00,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
@@ -126,6 +129,7 @@ export const products: Product[] = [
     color: [
       "blue"
     ],
+    categories: ["Man", "Unisex"],
     price: 23.00,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
@@ -153,6 +157,7 @@ export const products: Product[] = [
     color: [
       "black"
     ],
+    categories: ["Man", "Unisex"],
     oldprice: [23.00],
     price: 12.50,
     sizes: ["XS", "S", "M", "L", "XL"],
@@ -181,6 +186,7 @@ export const products: Product[] = [
     color: [
       "green pine"
     ],
+    categories: ["Man", "Unisex"],
     price: 13.00,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
@@ -208,6 +214,7 @@ export const products: Product[] = [
     color: [
       "whitesand"
     ],
+    categories: ["Man"],
     price: 19.99,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
@@ -235,6 +242,7 @@ export const products: Product[] = [
     color: [
       "white"
     ],
+    categories: ["Man"],
     oldprice: [25.49],
     price: 23.99,
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
@@ -263,6 +271,7 @@ export const products: Product[] = [
     color: [
       "black"
     ],
+    categories: ["Man"],
     oldprice: [24.99],
     price: 17.49,
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -291,6 +300,7 @@ export const products: Product[] = [
     color: [
       "off white"
     ],
+    categories: ["Man", "Unisex"],
     price: 24.95,
     sizes: ["M", "L", "XL", "XXL"],
     photos: [
@@ -318,6 +328,7 @@ export const products: Product[] = [
     color: [
       "duskrose"
     ],
+    categories: ["Man", "Unisex"],
     price: 29.95,
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [

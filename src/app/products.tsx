@@ -4,6 +4,7 @@ export type Product = {
   color: string[]
   price: number
   sizes: string[]
+  categories?: string[]
   photos: { src: string; alt: string }[]
   oldprice?: number[]
 }
@@ -16,6 +17,7 @@ export const products: Product[] = [
       "light brown"
     ],
     price: 29.9,
+    categories: ["Man", "Unisex"],
     sizes: ["S", "M", "L", "XL", "XXL"],
     photos: [
       {

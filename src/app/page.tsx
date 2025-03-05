@@ -20,7 +20,9 @@ export default async function Home({searchParams}: {searchParams: Promise<{searc
   
   const result = fuse.search(searchQuery )
   const productList = searchQuery ? result.map(({item}) => item) : products
-  const productsOnPage= productList.slice(page, productsPerPage)
+  const startItem = page * productsPerPage
+  const productsOnPage= productList.slice(startItem, startItem + productsPerPage)
+
 
 
   return (

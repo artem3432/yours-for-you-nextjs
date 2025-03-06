@@ -14,6 +14,8 @@ https://html5up.net/   html templates
 https://mui.com/material-ui/react-drawer/
 https://fonts.google.com/
 https://www.fusejs.io/ search for js
+https://www.figma.com/      geld
+https://www.radix-ui.com/     kostenlos
 
 https://nextjs.org/learn
 

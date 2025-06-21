@@ -36,7 +36,7 @@ export default async function Home({searchParams}: {searchParams: Promise<{searc
         <div className="blocktext">
           <div>
             <div>
-              <h2 className="text-s1 font-extrabold dark:text-white">Best for you</h2>
+              <h2 className="text-s1 font-extrabold text-white">Best for you</h2>
             </div>
             <div>
               <p className="text-s1 text-gray-400">Find your style in our
